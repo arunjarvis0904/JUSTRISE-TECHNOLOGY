@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e2d;
+            color: #c7c7c7;
+        }
+        .navbar, .sidebar {
+            background-color: #2f2f3a;
+        }
+        .sidebar .nav-link {
+            color: #c7c7c7;
+        }
+        .sidebar .nav-link.active {
+            background-color: #4b4b5a;
+        }
+        .card {
+            background-color: #2a2a37;
+            border: none;
+        }
+        .card-header {
+            background-color: #2a2a37;
+            border-bottom: 1px solid #444;
+        }
+        .card-body {
+            color: #c7c7c7;
+        }
+        .btn {
+            background-color: #4b4b5a;
+            color: #c7c7c7;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #575768;
+        }
+        .draggable {
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Vuexy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">English</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">John Doe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-cog"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">eCommerce</a>
+                        </li>
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>APPS</span>
+                        </h6>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Email</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Todo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">eCommerce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">User</a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>UI</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Data List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Grid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Colors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Card</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Components</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Analytics</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2 draggable">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Congratulations Arun,</div>
+                                <p>You have done 57.6% more sales today. Check your new badge in your profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">92.6k</div>
+                                <p>Subscribers Gained</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">97.5k</div>
+                                <p>Orders Received</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">2.7k</div>
+                                <p>Avg Sessions</p>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Support Tracker</div>
+                                <p>163 Tickets</p>
+                                <canvas id="doughnutChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">29 New Tickets</div>
+                                <p>63 Open Tickets</p>
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Sales Performance</div>
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $(function() {
+            $(".draggable").draggable();
+        });
+
+        var ctxLine = document.getElementById('lineChart').getContext('2d');
+        var lineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                datasets: [{
+                    label: 'Sessions',
+                    data: [12, 19, 3, 5, 2, 3, 7],
+                    borderColor: '#6c757d',
+                    backgroundColor: 'rgba(108, 117, 125, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Weekly Sessions'
+                }
+            }
+        });
+
+        var ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+        var doughnutChart = new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Completed', 'Pending', 'In Progress'],
+                datasets: [{
+                    data: [83, 10, 7],
+                    backgroundColor: ['#007bff', '#dc3545', '#ffc107']
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Support Tracker'
+                }
+            }
+        });
+
+        var ctxPie = document.getElementById('pieChart').getContext('2d');
+        var pieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['New Tickets', 'Open Tickets'],
+                datasets: [{
+                    data: [29, 63],
+                    backgroundColor: ['#28a745', '#17a2b8']
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Tickets'
+                }
+            }
+        });
+
+        var ctxBar = document.getElementById('barChart').getContext('2d');
+        var barChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [
+                    {
+                        label: 'Electronics',
+                        backgroundColor: '#007bff',
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: 'Fashion',
+                        backgroundColor: '#dc3545',
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    },
+                    {
+                        label: 'Food',
+                        backgroundColor: '#ffc107',
+                        data: [58, 48, 77, 9, 100, 27, 40]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Sales Performance'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
